@@ -29,7 +29,7 @@ export function update(id: u32, updates: PartialOrder): Order {
     return Order.findByIdAndUpdate(id, updates);
 }
 
-//near view $CONTRACT get '{"offset":0}' --accountId malibil.testnet(deleting)
+//near call $CONTRACT del '{"id":SOME_ID_HERE }' --accountId malibil.testnet (deleting)
 export function del(id: u32): void {
     logging.log(`deleted id=> ${id}`);
     Order.findByIdAndDelete(id);
