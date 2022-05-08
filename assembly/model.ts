@@ -5,7 +5,7 @@ export const orders = new PersistentUnorderedMap<u32, Order>("o");
 
 @nearBindgen
 export class PartialOrder {
-    done: bool;
+    unit: u32;
 }
 
 @nearBindgen
@@ -42,13 +42,13 @@ export class Order {
         return orders.values(offset, offset + limit);
     }
 
-    //Update done in order if the manufacturer has completed the order
+    //Update unit in order if you want to change the number of orders
     static findByIdAndUpdate(id: u32, partial: PartialOrder): Order {
         //find order by id
         const order = this.findById(id);
 
         //update the order in memory
-        order.done = partial.done;
+        order.unit = partial.unit;
 
         //updated order
         orders.set(id, order);
