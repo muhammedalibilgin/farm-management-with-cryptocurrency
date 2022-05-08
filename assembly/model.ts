@@ -1,5 +1,6 @@
 import { PersistentUnorderedMap, math, context, storage } from "near-sdk-as";
 
+//Data storage
 export const orders = new PersistentUnorderedMap<u32, Order>("o");
 
 @nearBindgen
