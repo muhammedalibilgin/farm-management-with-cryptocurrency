@@ -25,7 +25,7 @@ Trading the goods produced on the farm and needed by the farm with cryptocurrenc
 
 > **loom video**
 
-[![loom video](https://patika-prod.s3-eu-central-1.amazonaws.com/userFiles/muhammedalibilgin/projects/36QJ334aQi6nGynPa-farm-management-with-cryptocurrency)](https://www.loom.com/share/dbd31c9365d749a1aaa5b06b793f8958)
+[![loom video](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcp7mu45C_kbp41MmhGKM_imB2VcIKcAnXaHohJtfXq77uoEMxfVdx0klpg93G9dpHVTY&usqp=CAU)](https://www.loom.com/share/dbd31c9365d749a1aaa5b06b793f8958)
 
 ---
 
