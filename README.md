@@ -33,21 +33,35 @@ Trading the goods produced on the farm and needed by the farm with cryptocurrenc
 
 > -   **create a new order**
 
-    near call $CONTRACT create '{"product":"egg", "unit":30}' --accountId YOUR_ACCOUNT_ID.testnet
+For example creating an order of 40 apples.
 
-    yarn dev
+    near call $CONTRACT create '{"product":"some_product", "unit":number}' --accountId YOUR_ACCOUNT_ID.testnet
+
+![Create a new order](./figures/create_order.png)
 
 > -   **view order list**
 
+Let's view our apple order with the orders created for testing purposes before.
+
     near view $CONTRACT get '{"offset":0}' --accountId YOUR_ACCOUNT_ID.testnet
+
+![View order list](./figures/view_order_list.png)
 
 > -   **update order**
 
+Let's update our apple order number from 40 to 45.
+
     near call $CONTRACT update '{"id":SOME_ID_HERE, "updates":{"unit":U32} }' --accountId YOUR_ACCOUNT_ID.testnet
+
+![Update order list](./figures/update_order.png)
 
 > -   **delete order**
 
+And finally we can delete the apple order we added.
+
     near call $CONTRACT del '{"id":SOME_ID_HERE }' --accountId YOUR_ACCOUNT_ID.testnet
+
+![Delete order list](./figures/delete_order.png)
 
 ---
 
