@@ -10,10 +10,12 @@ import { Order, PartialOrder } from "./model";
 
 //near call $CONTRACT create '{"product":"some product","unit":how-much}' --accountId malibil.testnet (creating)
 export function create(product: string, unit: u32): Order {
+    assert(unit > 4, "At least 5 units can be ordered.");
     logging.log(`order successful=> ${product}`);
     return Order.insert(product, unit);
 }
 
+//near view $CONTRACT getById '{"id": 2097761562}'
 export function getById(id: u32): Order {
     return Order.findById(id);
 }
