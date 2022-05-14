@@ -19,7 +19,7 @@ Trading the goods produced on the farm and needed by the farm with cryptocurrenc
 
 ![Contract id](https://patika-prod.s3-eu-central-1.amazonaws.com/content/courses/near-developer-course/lessons/example-crud-dApp/dpng-TxtuzaQZj8ubQnx7d)
 
-    export CONTRACT=YOUR-CONTRACT-ID
+    export CONTRACT=<dev-123-456>
 
 ---
 
