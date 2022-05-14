@@ -9,6 +9,11 @@ export class PartialOrder {
 }
 
 @nearBindgen
+export class changeDone {
+    done: bool;
+}
+
+@nearBindgen
 export class Order {
     id: u32;
     product: string;
@@ -59,5 +64,19 @@ export class Order {
     //Delete Order
     static findByIdAndDelete(id: u32): void {
         orders.delete(id);
+    }
+
+    //Order Done, if the order has been sent
+    static orderCompleted(id: u32, partial: changeDone): Order {
+        //find order by id
+        const order = this.findById(id);
+
+        //update the order in memory
+        order.done = partial.done;
+
+        //updated order
+        orders.set(id, order);
+
+        return order;
     }
 }

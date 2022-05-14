@@ -1,7 +1,8 @@
 // The entry file of your WebAssembly module.
 
 import { logging } from "near-sdk-core";
-import { Order, PartialOrder } from "./model";
+import { Order, PartialOrder, changeDone } from "./model";
+import { context } from "near-sdk-as";
 
 //irrelevant
 // export function add(a: i32, b: i32): i32 {
@@ -35,4 +36,11 @@ export function update(id: u32, updates: PartialOrder): Order {
 export function del(id: u32): void {
     logging.log(`deleted id=> ${id}`);
     Order.findByIdAndDelete(id);
+}
+
+// near call $CONTRACT update '{"id":1507251732, "updates":{"unit":9} }' --accountId malibil.testnet
+export function orderDone(id: u32, updates: changeDone): Order {
+    assert(context.predecessor == "malibil.testnet", "only malibil.testnet can complete the order.");
+    logging.log(`updated id=> ${id} and it's done ✅ ${context.predecessor}`);
+    return Order.orderCompleted(id, updates);
 }
