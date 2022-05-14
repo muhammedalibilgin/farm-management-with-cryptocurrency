@@ -25,7 +25,24 @@ Trading the goods produced on the farm and needed by the farm with cryptocurrenc
 
 > **loom video**
 
-[![loom video](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcp7mu45C_kbp41MmhGKM_imB2VcIKcAnXaHohJtfXq77uoEMxfVdx0klpg93G9dpHVTY&usqp=CAU)](https://www.loom.com/share/dbd31c9365d749a1aaa5b06b793f8958)
+You can access the video from the link below.
+
+[![loom video](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcp7mu45C_kbp41MmhGKM_imB2VcIKcAnXaHohJtfXq77uoEMxfVdx0klpg93G9dpHVTY&usqp=CAU)](https://www.loom.com/share/521abcf1c87549d2a99c37d91d8022f5)
+
+---
+
+# Functions
+
+We have 6 functions.
+
+| Function  | What does it do?                                                       |
+| --------- | ---------------------------------------------------------------------- |
+| create    | Used to create a new order. Takes 2 arguments; product and unit.       |
+| getById   | The order is tracked with the id. Takes one argument; id.              |
+| get       | The order list is fully traceable but at intervals of 10.              |
+| update    | The unit of ordered products can be updated. Takes one argument; unit. |
+| del       | The order is deleted. Takes one argument; id.                          |
+| orderDone | It is updated whether the order has been completed or not.             |
 
 ---
 
